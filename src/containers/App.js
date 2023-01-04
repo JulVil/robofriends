@@ -8,7 +8,7 @@ import './App.css';
 class App extends Component{
     constructor() {
         super()
-        this.state ={
+        this.state = {
             robots: [],
             searchfield: ''
         }
@@ -27,6 +27,7 @@ class App extends Component{
     render() {
         
         const { robots, searchfield } = this.state;
+        
         const filteredRobots = robots.filter(robot =>{
             return robot.name.toLowerCase().includes(searchfield.toLowerCase());
         })
